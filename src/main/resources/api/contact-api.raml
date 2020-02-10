@@ -1,0 +1,37 @@
+#%RAML 1.0
+baseUri: https://anypoint.mulesoft.com/mocking/api/v1/links/eac5f549-08d7-45af-a4f8-09925f9d43f4/ # 
+version: "1"
+protocols:
+  - HTTP
+  - HTTPS
+/contacts:
+  get:
+    responses:
+      "200":
+        body:
+          application/json:
+              type: array
+              items: Contacts
+types:
+  Contacts:
+    example:
+      strict: true
+      value:
+        FirstName: satish
+        LastName: k
+        Email: satish,garry@gmail.com
+        Company: MVC
+    properties:
+      FirstName?:
+        example: Example
+        type: string
+      LastName?:
+        example: Example
+        type: string
+      Email?:
+        example: Example
+        type: string
+      Company?:
+        example: Example
+        type: string
+title: Get Contact API
