@@ -12,6 +12,34 @@ protocols:
           application/json:
               type: array
               items: Contacts
+  post:
+    body:
+      application/json:
+        type: Contacts
+    responses:
+      201:
+        body: 
+          application/json:
+            example: 
+              message: Contact added 
+/contact/{ID}:
+  delete:
+    responses:
+      200:
+        body:
+          application/json:
+            example:
+              message: Contact Deleted
+  put:
+    body:
+      application/json:
+        type: Contacts
+    responses:
+      200:
+        body:
+          application/json:
+            example:
+              message: Contact Updated    
 types:
   Contacts:
     example:
